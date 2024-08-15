@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="
+http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Log Results</title>
+    <link rel="stylesheet" href="
+https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center">Log Results</h1>
+    <textarea class="form-control" rows="20" readonly th:each="log : ${logs}" th:text="${log} + '\n'">
+
+    </textarea>
+    <div class="mt-3 text-center">
+        <a href = "javascript:history.back()" class = "btn btn-secondary" >Regresar</a>
+        <button class="btn btn-success" onclick="window.print();">Imprimir</button>
+    </div>
+    <br>
+</div>
+</body>
+</html>
